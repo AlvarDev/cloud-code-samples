@@ -8,6 +8,10 @@ build:
   artifacts:
   - context: .
     image: go-hello-world
+test:
+  - image: go-hello-world
+    custom:
+      - command: go test
 deploy:
   kubectl:
     manifests:
